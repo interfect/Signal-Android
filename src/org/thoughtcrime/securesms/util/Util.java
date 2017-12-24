@@ -355,8 +355,9 @@ public class Util {
   }
 
   public static int getDaysTillBuildExpiry() {
-    int age = (int)TimeUnit.MILLISECONDS.toDays(System.currentTimeMillis() - BuildConfig.BUILD_TIMESTAMP);
-    return 90 - age;
+    // Originally this was 90 days from the build timestamp in BuildConfig.BUILD_TIMESTAMP
+    // Until I can rip it out I can just hardcode it to some non-expired value.
+    return 89;
   }
 
   @TargetApi(VERSION_CODES.LOLLIPOP)
